@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app version="3.1" xmlns="http://xmlns.jcp.org/xml/ns/javaee" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://xmlns.jcp.org/xml/ns/javaee http://xmlns.jcp.org/xml/ns/javaee/web-app_3_1.xsd">
+    <context-param>
+        <param-name>imgProductPath</param-name>
+        <param-value>images/prod/</param-value>
+    </context-param>
+<!--    <servlet>
+        <servlet-name>viewProductpagination</servlet-name>
+        <servlet-class>controller.viewProductpagination</servlet-class>
+    </servlet>
+    <servlet>
+        <servlet-name>Faces Servlet</servlet-name>
+        <servlet-class>javax.faces.webapp.FacesServlet</servlet-class>
+    </servlet>-->
+    <!--    <servlet-mapping>
+        <servlet-name>Faces Servlet</servlet-name>
+        <url-pattern>/faces/*</url-pattern>
+    </servlet-mapping>-->
+    <session-config>
+        <session-timeout>
+            30
+        </session-timeout>
+    </session-config>
+    <welcome-file-list>       
+        <welcome-file>index.jsp</welcome-file>
+        <welcome-file>admin/index.jsp</welcome-file>
+    </welcome-file-list>
+    <jsp-config>    
+        <jsp-property-group>             
+            <description>JSP configuration for the store front</description>             
+            <url-pattern>/index.jsp</url-pattern>             
+            <url-pattern>/contact.jsp</url-pattern>         
+            <url-pattern>/login.jsp</url-pattern>  
+            <url-pattern>/account.jsp</url-pattern>  
+            <url-pattern>/checkout.jsp</url-pattern>     
+            <url-pattern>/confirmation.jsp</url-pattern> 
+            <url-pattern>/cart.jsp</url-pattern>  
+            <url-pattern>/product_details.jsp</url-pattern>
+            <url-pattern>/view_products.jsp</url-pattern>  
+            <include-prelude>/WEB-INF/jspf/USheader.jspf</include-prelude> 
+            <include-coda>/WEB-INF/jspf/USfooter.jspf</include-coda>
+        </jsp-property-group>
+        <jsp-property-group> 
+            <description>JSP configuration for the admin console </description>             
+            <url-pattern>/admin/AccountAdmin.jsp</url-pattern> 
+            <url-pattern>/admin/AdminProfile.jsp</url-pattern>  
+            <url-pattern>/admin/InsertProduct.jsp</url-pattern>  
+            <url-pattern>/admin/UpdateCustomer.jsp</url-pattern>  
+            <url-pattern>/admin/UpdateOrder.jsp</url-pattern>   
+            <url-pattern>/admin/UpdateProduct.jsp</url-pattern>
+            <url-pattern>/admin/index.jsp</url-pattern>                
+            <include-prelude>/WEB-INF/jspf/ADheader.jspf</include-prelude>                     
+        </jsp-property-group>
+    </jsp-config>  
+</web-app>
